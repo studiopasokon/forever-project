@@ -12,3 +12,8 @@ All code in this space is about learning and growing, not about delivering a wor
 
 - https://heredragonsabound.blogspot.com/2020/02/the-forever-project.html
 - https://nickb.dev/blog/the-joys-and-woes-of-a-forever-project
+
+## License
+
+The full source code in this repository is by default subjected to the AGPL-3.0 license but it is possible that some separate projects or source files
+may get a different license as a consequence of embedding third pary code that has a different license already.
