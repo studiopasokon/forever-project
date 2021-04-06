@@ -5,17 +5,17 @@ namespace StudioPasokon.ForEverProject.DataTypes
     /// <summary>
     /// Implementation of the non-null, non-empty and non-whitespace string type.
     /// </summary>
-    public struct MandatoryString
+    public readonly struct MandatoryString
     {
         /// <summary>
         /// This field contains the real string data.
         /// </summary>
-        private string _internalString;
+        private readonly string _internalString;
 
         /// <summary>
         /// Constructor.
         /// </summary>
-        /// <param name="value">The string value to store in the <see cref="MandatoryString"> type.</param>
+        /// <param name="value">The string value to store in the <see cref="MandatoryString"/> type.</param>
         public MandatoryString(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -28,9 +28,15 @@ namespace StudioPasokon.ForEverProject.DataTypes
         public override string ToString() => _internalString;
 
         /// <summary>
-        /// Implecit conversion from a <see cref="MandatoryString"/> to an ordinary string.
+        /// Implicit conversion from a <see cref="MandatoryString"/> to an ordinary string.
         /// </summary>
-        /// <param name="ms"></param>
+        /// <param name="ms"><see cref="MandatoryString"/> value to convert.</param>
         public static implicit operator string(MandatoryString ms) => ms.ToString();
+
+        /// <summary>
+        /// Explicit conversion from a string to a <see cref="MandatoryString"/>.
+        /// </summary>
+        /// <param name="s">String value to convert.</param>
+        public static explicit operator MandatoryString(string s) => new MandatoryString(s);
     }
 }

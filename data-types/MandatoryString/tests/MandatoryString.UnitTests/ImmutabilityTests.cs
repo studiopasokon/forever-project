@@ -22,9 +22,6 @@ namespace StudioPasokon.ForEverProject.DataTypes.Tests
 
             // Assert.
             mandatoryString.ToString().Should().Be(data);   // Explicit ToString().
-
-            string tmpString = mandatoryString;             // Implicit ToString().
-            tmpString.Should().Be(data);
         }
 
         [Theory]
@@ -45,6 +42,33 @@ namespace StudioPasokon.ForEverProject.DataTypes.Tests
                 .Throw<ArgumentNullException>()
                 .WithMessage("A mandatory string cannot be null, empty or fully whitespace (Parameter 'value')")
                 .And.ParamName.Should().Be("value");
+        }
+
+        [Fact]
+        public void Convert_String_To_MandatoryString()
+        {
+            // Arrange.
+            var inputValue = "String to convert";
+
+            // Act.
+            var result = (MandatoryString)inputValue;
+
+            // Assert.
+            result.ToString().Should().Be(inputValue);
+        }
+
+        [Fact]
+        public void Convert_MandatoryString_To_String()
+        {
+            // Arrange.
+            const string baseValue = "Mandatory string to convert";
+            var inputValue = new MandatoryString(baseValue);
+
+            // Act.
+            string result = inputValue;
+
+            // Assert.
+            result.Should().Be(baseValue);
         }
     }
 }
