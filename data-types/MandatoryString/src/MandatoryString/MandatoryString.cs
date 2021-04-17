@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StudioPasokon.ForEverProject.DataTypes
+namespace StudioPasokon.ForeverProject.DataTypes
 {
     /// <summary>
     /// Implementation of the non-null, non-empty and non-whitespace string type.

@@ -2,7 +2,7 @@ using System;
 using FluentAssertions;
 using Xunit;
 
-namespace StudioPasokon.ForEverProject.DataTypes.Tests
+namespace StudioPasokon.ForeverProject.DataTypes.Tests
 {
     /// <summary>
     /// This test class checks whether the <see cref="MandatoryString"/> indeed is immutable.
