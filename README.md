@@ -8,6 +8,15 @@ This isn't a project that will contain a specific piece of software. It is inten
 
 All code in this space is about learning and growing, not about delivering a working piece of software.
 
+## Folders / subprojects
+
+Following folders with subprojects are present in the tree:
+
+- data-types: contains specific value object and value type implementations.
+    - MandatoryString: a string type can is guaranteed to always contain a non-null, non-empty, non-whitespace string value.
+- func-prog: projects that implement extensions to assist a style of functional programming in C#.
+    - Disposable: a project containing extensions to convert the use of disposable objects in a functional style.
+
 ## Resources
 
 - https://heredragonsabound.blogspot.com/2020/02/the-forever-project.html
