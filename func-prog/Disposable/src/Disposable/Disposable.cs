@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StudioPasokon.ForEverProject.FuncProg
+namespace StudioPasokon.ForeverProject.FuncProg
 {
     /// <summary>
     /// Class implementing supporting functions for assisting coding "disposable" and "using"
